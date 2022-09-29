@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 10px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.w100 {
+    font-weight: 100;
+}
+
+.w200 {
+    font-weight: 200;
+}
+
+.w300 {
+    font-weight: 300;
+}
+
+.w400 {
+    font-weight: 400;
+}
+
+#nav-bar {
+    float: right;
+    margin-top: -15px;
+}
+
+#nav-bar div {
+    float: left;
+}
+
+.navbar-nav li {
+    padding: 0 10px;
+}
+
+.fa-regular {
+    outline: none !important;
+    float: left;
+}
+
+.nav-bar toggler {
+    outline: none !important;
+    float: left;
+}
+
+
+.container {
+    background-image: url("image.jpg");
+    width: 200px;
+    height: 100px;
+    object-fit: fill;
+}
+
+body {
+    padding: 20px;
+}
+
+button {
+    margin-top: 20px;
+    line-height: 60px;
+    font-weight: bold;
+    padding: 0 40px;
+    background: #fff;
+    border: none;
+    float: right;
+}
+
+#container {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 0;
+}
+
+:root {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "scsdcsd";
+    font-size: 1rem;
+}
+
+header,
+footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1em;
+    background: rgb(214, 28, 28);
+    color: rgb(171, 27, 176);
+    z-index: 1000;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 10px;
+    gap: 10px;
+    position: relative;
+    top: 100px;
+    width: 100%;
+}
+
+.grid-container>div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+    border:1px solid rgb(210, 210, 210);
+
+}
+
+/* .grid-item:hover{
+    background-color: rgb(61, 27, 130);
+	cursor: pointer;
+  } */
+
+.pagination-lg {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    top: 100px;
+    left: 700px;
+    display: inline-block;
+}
+
+.search {
+    width: 300px;
+    height: 25px;
+    padding: 15px;
+    float: right;
+}
+
+hr {
+    height: 1px;
+    border: 0 none;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 80px;
+    margin-bottom: 90px;
+    background-color: rgb(0, 0, 0);
+}
+
+* {
+    box-sizing: border-box
+}
+
+.menu {
+    border:1px solid black;
+    padding: 15px;
+}
