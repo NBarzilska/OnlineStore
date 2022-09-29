@@ -173,3 +173,5 @@ function slideServices() {
     availableService.push(firstService);
     loadServices();
 }
+
+console.log('ready');
