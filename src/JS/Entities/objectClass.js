@@ -2,8 +2,8 @@ export class DeviceStore {
 
     availableProducts = [];
 
-    addDevice(icon, name, price, promotion = 0) {
-        let newDevice = { "icon": icon, "name": name, "price": price };
+    addDevice(id, icon, name, price, description) {
+        let newDevice = { "id": id, "icon": icon, "name": name, "price": price, 'description': description};
         this.availableProducts.push(newDevice);
     };
 

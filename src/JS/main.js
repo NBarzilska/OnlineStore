@@ -1,11 +1,13 @@
 import { ObjectContentProvider } from "./ContentProviders/ObjectContentProvider.js";
 import { SlideshowContentProvider } from "./ContentProviders/SlideshowContentProvider.js";
 
+
 let fileteredItems = [];
 
 let container = document.getElementById('myContainer');
 let grid = document.getElementById('gridItems');
-let availableProducts = ObjectContentProvider.getItems();
+let contentProvider = new ObjectContentProvider();
+let availableProducts = contentProvider.getItems();
 
 fileteredItems = availableProducts;
 
@@ -23,7 +25,6 @@ clearBtn.disabled = true;
 changePage(1);
 
 function filter(e) {
-    console.log('filter');
     fileteredItems = [];
     let inputValue = e.target.value;
     if (inputValue != '') {
@@ -57,7 +58,6 @@ function reload() {
 }
 
 function changePage(page) {
-    console.log('change pages' + page);
     let startIndex = (page - 1) * 8 + 1;
     let endIndex = (page - 1) * 8 + 8;
     let appearedItems = fileteredItems.slice(startIndex - 1, endIndex);
@@ -65,7 +65,6 @@ function changePage(page) {
 }
 
 function loadPage(items) {
-    console.log('load page' + items.length);
     grid.innerHTML = '';
     for (let i = 0; i < items.length; i++) {
         let itemAll = document.createElement('div');
@@ -83,7 +82,19 @@ function loadPage(items) {
         price.innerHTML = items[i].price;
         price.style.color = "red";
         itemAll.appendChild(price);
+
+        let detailsBtn = document.createElement('button');
+        detailsBtn.textContent = 'Details';
+        detailsBtn.style.backgroundColor = 'salmon';
+        detailsBtn.style.color = 'white';
+        detailsBtn.style.textAlign = "center";
+  
+        detailsBtn.addEventListener('click', function () { showDetails(items[i].id); }, false);
+
+        itemAll.appendChild(detailsBtn);
+
         grid.appendChild(itemAll);
+
     }
 
 }
@@ -137,4 +148,10 @@ function slideServices() {
     let firstService = availableService.shift();
     availableService.push(firstService);
     loadServices();
+}
+
+function showDetails(id){
+    console.log('details');
+    console.log(id);
+    window.location.href = "./views/details.html?id=" + id;
 }
