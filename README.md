@@ -1,5 +1,5 @@
 ﻿# OnlineStore
-This project is my learnng process during wchich I am developing not only the JS code but also HTML and CSS.
+This project is showing my learning process during which I am developing JS, HTML and CSS at once.
 Here is a list with the features that I included in the project:
 - Using Bootstrap framework in building the grid in order to 
 - Adding an auto-scrolling slider at the bottom of the page about store data
